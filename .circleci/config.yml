@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:12.18.1
-    working_directory: ~/
+    working_directory: ~/node-hello
     steps:
       - restore_cache:
           keys:
