@@ -5,15 +5,15 @@ jobs:
     docker:
       - image: circleci/node:12.18.1
     steps:
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-depedencies-
+      #- restore_cache:
+         # keys:
+         #- v1-dependencies-{{ checksum "package.json" }}
+          #- v1-depedencies-
       - run: npm install
-      - save_cache:
-          paths:
-              - node_modules
-          key: v1-dependencies-{{ checksum "package.json"}}
+      #- save_cache:
+         #paths:
+              #- node_modules
+          #key: v1-dependencies-{{ checksum "package.json"}}
       - run: npm start
 
 
